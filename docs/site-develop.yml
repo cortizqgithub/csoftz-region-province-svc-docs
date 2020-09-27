@@ -1,0 +1,22 @@
+site:
+  title: CTASK Runbook
+  # the 404 page and sitemap files only get generated when the url property is set
+  url: https://disneycruise.disney.go.com
+  start_page: ctask-runbook::index.adoc
+content:
+  sources:
+  # embedding empty credentials in the URL disables the Edit this Page link for any page created from this repository
+  - url: git@github.disney.com:ORTIC140/web-global-cruisesales-runbook.git
+    branches: develop
+    start_path: docs
+ui:
+  bundle:
+    #url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    #url: https://github.disney.com/ORTIC140/disney-antora-ui-default/releases/download/20200817-V1.0.0/ui-bundle.zip
+    url: https://github.com/cortizqgithub/csoftz-antora-ui-default/releases/download/20200817-V1.0.0/ui-bundle.zip
+    snapshot: true
+  supplemental_files:
+    - path: ui.yml
+      contents: |
+        static_files: [ .nojekyll ]
+    - path: .nojekyll
